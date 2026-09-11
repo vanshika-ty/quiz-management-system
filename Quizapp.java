@@ -1,8 +1,21 @@
 
-
 import java.util.Scanner;
 
 public class Quizapp {
+
+    // Method to take and validate the user's answer
+    static char getAnswer(Scanner input) {
+        char ans = input.next().charAt(0);
+
+        while (ans != 'a' && ans != 'b' && ans != 'c' && ans != 'd') {
+            System.out.println("Invalid option! Please enter A, B, C, or D.");
+            System.out.print("Pick an option: ");
+            ans = input.next().charAt(0);
+        }
+
+        return ans;
+    }
+
     public static void main(String[] args) {
 
         questions_answers questions = new questions_answers();
@@ -13,36 +26,24 @@ public class Quizapp {
         char ans;
         int correct = 0, wrong = 0;
 
-    
+        // Question 1
         questions.question1();
         System.out.print("\nPick an option: ");
-        ans = input.next().charAt(0);
-
-        while (ans != 'a' && ans != 'b' && ans != 'c' && ans != 'd') {
-            System.out.println("Invalid option! Please enter A, B, C, or D.");
-            System.out.print("Pick an option: ");
-            ans = input.next().charAt(0);
-        }
+        ans = getAnswer(input);
 
         if (ans == answers.answer1) {
             correct++;
-        } else { 
+        } else {
             wrong++;
         }
 
         System.out.println();
 
 
-   
+        // Question 2
         questions.question2();
         System.out.print("\nPick an option: ");
-        ans = input.next().charAt(0);
-
-        while (ans != 'a' && ans != 'b' && ans != 'c' && ans != 'd') {
-            System.out.println("Invalid option! Please enter A, B, C, or D.");
-            System.out.print("Pick an option: ");
-            ans = input.next().charAt(0);
-        }
+        ans = getAnswer(input);
 
         if (ans == answers.answer2) {
             correct++;
@@ -53,15 +54,10 @@ public class Quizapp {
         System.out.println();
 
 
+        // Question 3
         questions.question3();
         System.out.print("\nPick an option: ");
-        ans = input.next().charAt(0);
-
-        while (ans != 'a' && ans != 'b' && ans != 'c' && ans != 'd') {
-            System.out.println("Invalid option! Please enter A, B, C, or D.");
-            System.out.print("Pick an option: ");
-            ans = input.next().charAt(0);
-        }
+        ans = getAnswer(input);
 
         if (ans == answers.answer3) {
             correct++;
@@ -72,16 +68,10 @@ public class Quizapp {
         System.out.println();
 
 
-      
+        // Question 4
         questions.question4();
         System.out.print("\nPick an option: ");
-        ans = input.next().charAt(0);
-
-        while (ans != 'a' && ans != 'b' && ans != 'c' && ans != 'd') {
-            System.out.println("Invalid option! Please enter A, B, C, or D.");
-            System.out.print("Pick an option: ");
-            ans = input.next().charAt(0);
-        }
+        ans = getAnswer(input);
 
         if (ans == answers.answer4) {
             correct++;
@@ -92,16 +82,10 @@ public class Quizapp {
         System.out.println();
 
 
-     
+        // Question 5
         questions.question5();
         System.out.print("\nPick an option: ");
-        ans = input.next().charAt(0);
-
-        while (ans != 'a' && ans != 'b' && ans != 'c' && ans != 'd') {
-            System.out.println("Invalid option! Please enter A, B, C, or D.");
-            System.out.print("Pick an option: ");
-            ans = input.next().charAt(0);
-        }
+        ans = getAnswer(input);
 
         if (ans == answers.answer5) {
             correct++;
@@ -112,16 +96,10 @@ public class Quizapp {
         System.out.println();
 
 
-       
+        // Question 6
         questions.question6();
         System.out.print("\nPick an option: ");
-        ans = input.next().charAt(0);
-
-        while (ans != 'a' && ans != 'b' && ans != 'c' && ans != 'd') {
-            System.out.println("Invalid option! Please enter A, B, C, or D.");
-            System.out.print("Pick an option: ");
-            ans = input.next().charAt(0);
-        }
+        ans = getAnswer(input);
 
         if (ans == answers.answer6) {
             correct++;
@@ -132,15 +110,10 @@ public class Quizapp {
         System.out.println();
 
 
+        // Question 7
         questions.question7();
         System.out.print("\nPick an option: ");
-        ans = input.next().charAt(0);
-
-        while (ans != 'a' && ans != 'b' && ans != 'c' && ans != 'd') {
-            System.out.println("Invalid option! Please enter A, B, C, or D.");
-            System.out.print("Pick an option: ");
-            ans = input.next().charAt(0);
-        }
+        ans = getAnswer(input);
 
         if (ans == answers.answer7) {
             correct++;
@@ -151,15 +124,10 @@ public class Quizapp {
         System.out.println();
 
 
+        // Question 8
         questions.question8();
         System.out.print("\nPick an option: ");
-        ans = input.next().charAt(0);
-
-        while (ans != 'a' && ans != 'b' && ans != 'c' && ans != 'd') {
-            System.out.println("Invalid option! Please enter A, B, C, or D.");
-            System.out.print("Pick an option: ");
-            ans = input.next().charAt(0);
-        }
+        ans = getAnswer(input);
 
         if (ans == answers.answer8) {
             correct++;
@@ -170,11 +138,12 @@ public class Quizapp {
         System.out.println();
 
 
-       
+        // Question 9
         questions.question9();
         System.out.print("\nPick an option: ");
         ans = input.next().charAt(0);
 
+        // Q9 has only A and B options
         while (ans != 'a' && ans != 'b') {
             System.out.println("Invalid option! Please enter A or B.");
             System.out.print("Pick an option: ");
@@ -190,15 +159,10 @@ public class Quizapp {
         System.out.println();
 
 
+        // Question 10
         questions.question10();
         System.out.print("\nPick an option: ");
-        ans = input.next().charAt(0);
-
-        while (ans != 'a' && ans != 'b' && ans != 'c' && ans != 'd') {
-            System.out.println("Invalid option! Please enter A, B, C, or D.");
-            System.out.print("Pick an option: ");
-            ans = input.next().charAt(0);
-        }
+        ans = getAnswer(input);
 
         if (ans == answers.answer10) {
             correct++;
@@ -209,7 +173,7 @@ public class Quizapp {
         System.out.println();
 
 
-        
+        // Calculate percentage
         double percentage = ((double) correct / 10) * 100;
 
         System.out.println("========== RESULT ==========");
@@ -229,7 +193,6 @@ class questions_answers {
 
     void question1() {
         System.out.println(
-            
             "Q1 What is the capital of Australia?\n" +
             "A) Sydney\n" +
             "B) Melbourne\n" +
@@ -312,8 +275,7 @@ class questions_answers {
         System.out.println(
             "Q9 Who was the fisrt person to walk on the Moon?\n" +
             "A) Neil Armstrong\n" +
-            "B) Buzz Aldrin" 
-            
+            "B) Buzz Aldrin"
         );
     }
 
@@ -328,15 +290,16 @@ class questions_answers {
     }
 
 
-    
+    // Answer Key
     char answer1 = 'a';
-    char answer2 = 'b'; 
+    char answer2 = 'b';
     char answer3 = 'c';
     char answer4 = 'c';
     char answer5 = 'c';
     char answer6 = 'a';
-    char answer7 = 'b'; 
+    char answer7 = 'b';
     char answer8 = 'b';
-    char answer9 = 'c'; 
-    char answer10 = 'c'; 
+    char answer9 = 'a';
+    char answer10 = 'c';
 }
+
